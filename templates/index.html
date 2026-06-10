@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BossVault</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #0e1a77, #e8dcc0);
+        min-height: 100vh;
+      }
+
+      main {
+        backdrop-filter: blur(2px);
+      }
+
+      article {
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <div style="text-align: center">
+        <h1 style="color: #000">BossVault 😈</h1>
+        <p style="color: #000">The Ultimate Video Game Boss Encyclopedia</p>
+      </div>
+
+      <div
+        class="grid"
+        style="grid-template-columns: repeat(3, 1fr); align-items: stretch"
+      >
+        {{cards}}
+      </div>
+    </main>
+  </body>
+</html>

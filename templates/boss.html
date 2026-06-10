@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{name}} - BossVault</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #f5f1e6, #e8dcc0);
+        min-height: 100vh;
+      }
+
+      main {
+        backdrop-filter: blur(2px);
+      }
+
+      article {
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container" style="max-width: 800px; text-align: center">
+      <div style="margin-bottom: 20px">
+        <a href="/" role="button">Back to Home</a>
+      </div>
+
+      <h1 style="color: black">{{name}}</h1>
+
+      <img
+        src="{{image}}"
+        alt="{{name}}"
+        style="
+          width: 100%;
+          max-height: 400px;
+          object-fit: cover;
+          border-radius: 12px;
+          margin-bottom: 20px;
+        "
+      />
+
+      <article>
+        <p><strong>Game:</strong> {{game}}</p>
+        <p><strong>Difficulty:</strong> {{difficulty}}</p>
+      </article>
+
+      <hr />
+
+      <div>
+        <p style="color: rgb(43, 28, 118)">
+          <strong>Description:</strong> {{description}}
+        </p>
+        <p style="color: rgb(43, 28, 118)">
+          <strong>Location:</strong> {{location}}
+        </p>
+        <p style="color: rgb(43, 28, 118)">
+          <strong>Weakness:</strong> {{weakness}}
+        </p>
+        <p style="color: rgb(43, 28, 118)">
+          <strong>Reward:</strong> {{reward}}
+        </p>
+        <p style="color: rgb(43, 28, 118)">
+          <strong>Fun Fact:</strong> {{funFact}}
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
