@@ -54,10 +54,9 @@ router.get("/", async (req, res) => {
           .join("")
       : `<p style="color:#000; grid-column:1 / -1; text-align:center;">No bosses found matching "${search}".</p>`;
 
-    const html =
-      readTemplate("index.html")
-        .replace("{{cards}}", cards)
-        .replace(/{{search}}/g, search) + res.locals.liveReload;
+    const html = readTemplate("index.html")
+      .replace("{{cards}}", cards)
+      .replace(/{{search}}/g, search);
 
     res.send(html);
   } catch (err) {
