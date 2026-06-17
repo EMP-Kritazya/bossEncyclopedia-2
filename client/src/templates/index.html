@@ -31,6 +31,23 @@
         <p style="color: #000">The Ultimate Video Game Boss Encyclopedia</p>
       </div>
 
+      <form
+        role="search"
+        method="get"
+        action="/"
+        style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto 30px"
+      >
+        <input
+          type="search"
+          name="search"
+          placeholder="Search by boss name or game..."
+          value="{{search}}"
+          aria-label="Search bosses"
+          style="flex: 1"
+        />
+        <button type="submit">Search</button>
+      </form>
+
       <div
         class="grid"
         style="grid-template-columns: repeat(3, 1fr); align-items: stretch"

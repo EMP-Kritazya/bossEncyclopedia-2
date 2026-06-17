@@ -13,20 +13,6 @@ app.use("/images", express.static(path.join(CLIENT_DIR, "assets", "images")));
 
 const PORT = process.env.PORT || 3000;
 
-// Live reload helper for local development convenience.
-app.use((req, res, next) => {
-  res.locals.liveReload = `
-    <script>
-      setInterval(() => {
-        fetch(window.location.href).then(r => r.text()).then(html => {
-          if(html !== document.documentElement.outerHTML) location.reload();
-        });
-      }, 1000);
-    </script>
-  `;
-  next();
-});
-
 // Application routes (homepage, search, boss detail).
 app.use("/", bossesRouter);
 
