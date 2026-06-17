@@ -52,6 +52,13 @@ GIF created with Kap
 
 Describe any challenges encountered while building the app or any additional context you'd like to add.
 
+The main challenge was migrating the app from a hardcoded data array to a
+Render-hosted PostgreSQL database. This meant adding a `pg` connection pool
+(with SSL enabled, since Render requires it), writing a seed script to create
+and populate the `bosses` table, and rewriting the routes to query the database
+instead of a local file. A small `.env` formatting issue (spaces around the `=`)
+also briefly broke the connection string until it was corrected.
+
 ## License
 
 Copyright 2026 Kritazya Upreti
